@@ -1,0 +1,39 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<odoo>
+    <data>
+
+        <record id = "invoice_mail_template_id" model = "mail.template">
+            <field name = "name">invoice.mail.template</field>
+            <field name = "model_id" ref = "account.model_account_invoice"/>
+            <field name = "email_from">${(object.user_id.email and '%s &lt;%s&gt;' % (object.user_id.name, object.user_id.email) or '')|
+                                                                                        safe}</field>
+            <field name = "partner_to">${object.partner_id.id}</field>
+            <field name = "subject">Mail for Open Invoices</field>            
+            <field name = "auto_delete" eval = "True"/>
+            <field name = "report_template" 
+                   ref = "account.account_invoices"/>
+            <field name = "report_name">Invoice_${(object.number or '').replace('/','_')}_${object.state == 'open'}</field>
+            <field name = "lang">${object.partner_id.lang}</field>
+            <field name = "body_html">
+             
+                                <![CDATA[        
+                                      <div style="font-family: 'Lucica Grande', 
+                                                                Ubuntu, Arial, Verdana, sans-serif; 
+                                                                font-size: 12px; color: rgb(34, 34, 34);        
+                                                                background-color: #FFF; ">
+                                            <p>Dear <strong>${object.partner_id.name}</strong>,</p>                
+                                            <p>Here is your <strong>open invoices to register the payment</strong>.</p>
+                                            <p><strong>Immediately pay</strong> the amount (Within 2 days).</p>
+                                            <p>Do not hesitate to contact us if you have any question.</p>
+                                            <p><a href="/web/${object.partner_id.id}"
+                                                                    class="btn btn-success btn-lg" target="_blank">Approve</a></p>
+                                       </div>
+                                        
+                                        ]]>
+            </field>
+        </record>
+
+    </data>
+</odoo>
+
+
