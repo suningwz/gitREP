@@ -11,9 +11,9 @@
 
 
 {
-    'name': 'product varient',
+    'name': 'Product Varient COnfiguration',
     'version': '12.0.1.0.0',
-    'summary': 'product varient',
+    'summary': 'product varient Filtering and Creation',
     'author': 'Confianz Global,Inc.',
     'description': """
                 """,
