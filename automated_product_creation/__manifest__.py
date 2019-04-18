@@ -14,6 +14,8 @@
     'name': 'Automated Product Creation',
     'summary': 'This module help to  create product using CRON',
     'author': 'Aswanth',
+    'description': """
+                """,
     'version': '12.0.1.1.0',
     'category': 'Tools',
     'depends': ['base','product'],
