@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
 ##############################################################################      
 #         _______  _____            _______  _       _______
 #         |     | |       |       | |     | | \    |    |    |     |
@@ -23,8 +22,6 @@
     'data': [
         'views/sale_view.xml',
         'security/ir.model.access.csv'
-    ],
-    'test': [
     ],
     'images': ['static/description/icon.png'],
     'license': 'AGPL-3',
