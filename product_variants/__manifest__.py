@@ -13,7 +13,7 @@
     'name': 'product varient',
     'version': '12.0.1.0.0',
     'summary': 'product varient',
-    'author': 'Confianz Global,Inc.',
+    'author': 'Aswanth',
     'description': """
                 """,
     'depends': ['base','sale','product'],
