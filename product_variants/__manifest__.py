@@ -17,8 +17,7 @@
     'description': """
                 """,
     'depends': ['base','sale','product'],
-    'category': 'Hidden',
-    'sequence': 20,
+    'category': 'Tools',
     'data': [
         'views/sale_view.xml',
         'security/ir.model.access.csv'
