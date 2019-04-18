@@ -10,7 +10,7 @@
 
 
 {
-    'name': 'product varient',
+    'name': 'product varient configuration',
     'version': '12.0.1.0.0',
     'summary': 'product varient',
     'author': 'Aswanth',
