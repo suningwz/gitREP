@@ -26,6 +26,8 @@
     ],
     'test': [
     ],
+    'images': ['static/description/icon.png'],
+    'license': 'AGPL-3',
     'installable': True,
     'auto_install': False,
 }
