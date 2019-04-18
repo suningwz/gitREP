@@ -1,15 +1,9 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "automated_product_creation 1.0",
+    'name': "Automated Product Creation",
 
-    'summary': """
-        This module help to  create product using CRON""",
-
-    'description': """
-        CRON Product Creation
-    """,
-
-    'author': "AswanthBabu",
+    'summary': 'This module help to  create product using CRON',
+    'author': 'Aswanth',
     'category': 'Tools',
     'version': '12.0.1.1.0',
 
