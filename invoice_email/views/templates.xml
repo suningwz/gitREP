@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+       <template id="WebInvoices">
+       	<t t-call="website.layout">
+            <title>Invoices</title>
+                <div class="oe_structure">
+                    <div class="container">
+                        <title>Invoice</title>
+                            <form t-if="invoices" action="/web/invoice/approve" method="GET">
+                            <div align="center">
+                            
+                            <table>
+                                <tr>
+                                    <th> </th>
+                                    <th>name</th>
+                                    <th>Number</th>
+                                    <th>Due Date</th>
+                                    <th>Source Document</th>
+                                    <th>Tax Excluded</th>
+                                    <th>Tax</th>
+                                    <th>Total</th>
+                                    <th>Amount Due</th>
+                                </tr>
+                                <t t-foreach="invoices" t-as="invoice">
+                                    <tr>
+                                         <td><input type="Checkbox" t-att-name='invoice.number' t-att-value='invoice.id'/></td>
+                                         <td><t t-esc="invoice.id"/></td>
+                                         <td><t t-esc="invoice.number"/></td>
+                                         <td><t t-esc="invoice.date_due"/></td>
+                                         <td><t t-esc="invoice.origin"/></td>
+                                         <td><t t-esc="invoice.amount_untaxed"/></td>
+                                         <td><t t-esc="invoice.amount_tax"/></td>
+                                         <td><t t-esc="invoice.amount_total_signed"/></td>
+                                         <td><t t-esc="invoice.residual_signed"/></td>
+                                         
+                                    </tr>
+                                </t>
+                         </table>
+                    	 </div>
+                         	<div align="center">
+                         		<input  type="submit" value='approve' class="btn btn-default btn-primary pull-center mb32"/>
+                         	</div>
+                         </form>
+                  </div>
+            </div>
+        </t>
+        </template>
+    </data>
+</odoo>

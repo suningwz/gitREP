@@ -1,0 +1,17 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<odoo>
+    <data>
+        <record id="view_form_editable_list" model="ir.ui.view">
+            <field name="name">invoice.email.view</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <header>
+                    <button name="send_invoice" string="Send Invoices" type="object" attrs="{'invisible':[('state', 'in',   
+                                                           ('draft','in_payment','paid'))]}" class="oe_highlight"/>
+                </header>
+            </field>
+        </record>
+    </data>
+</odoo>

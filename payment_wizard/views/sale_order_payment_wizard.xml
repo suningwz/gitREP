@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data> 
+
+  <act_window
+            id="action_sale_order_payment_from_invoices"
+            name="Register Payment"
+            res_model="saleorder.account.register.payment"
+            src_model="sale.order"
+            view_mode="form"
+            multi="True"
+            target="new"
+            key2="client_action_multi"
+        />
+
+  <record id="view_account_payment_from_saleorder" model="ir.ui.view">
+            <field name="name">saleodr.register.payments.wizard</field>
+            <field name="model">saleorder.account.register.payment</field>
+            <field name="arch" type="xml">
+                <form string="Register Payment">
+                  <group>
+                    <field name="invoice_ids" widget="many2many_tags"/>
+                  </group>
+
+                    <footer>
+                        <button string='Register Payment' name="create_payments" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+               </form>
+            </field>
+        </record>
+  </data>
+</odoo>

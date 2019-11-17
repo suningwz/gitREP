@@ -1,0 +1,28 @@
+<odoo>
+  <data>
+    <record id="product_product_search_view_inherit" model="ir.ui.view">
+            <field name="name">product.template.search.inherit</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_search_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//search" position="inside">
+                    <filter string="Website order" name="Website order" domain="[('website_order','=',True)]"/>
+                </xpath>
+            
+            </field>
+        </record>
+        
+         <record id="product_product_tree_view_inherit" model="ir.ui.view">
+            <field name="name">product.product.tree.inherit</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_product_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="/tree/field[@name='attribute_value_ids']" position="after">
+                    <field name="date_deliver"/>
+                </xpath>
+            
+            </field>
+        </record>
+    -->
+  </data>
+</odoo>
